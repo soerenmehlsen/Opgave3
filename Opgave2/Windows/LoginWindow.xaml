@@ -1,4 +1,4 @@
-﻿<Window x:Name="LoginWindow" x:Class="Opgave2.LoginUI"
+﻿<Window x:Name="LoginW" x:Class="Opgave2.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

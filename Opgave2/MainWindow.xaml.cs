@@ -22,7 +22,7 @@ namespace Opgave2
     public partial class MainWindow : Window
     {
         private Logic logicObj;
-        private LoginUI loginW; //LoginUI skal laves om til LoginWindow
+        private LoginWindow loginW; //LoginUI skal laves om til LoginWindow
         private BSWindow bloodsugarW;
         private BPWindow bloodpressureW;
         private WeightWindow weightW;
@@ -32,13 +32,14 @@ namespace Opgave2
         {
             InitializeComponent();
             logicObj = new Logic();
-            loginW = new LoginUI(this, logicObj);
+            loginW = new LoginWindow(this, logicObj);
             
 
             bloodsugarW = new BSWindow(SocSecNb, logicObj);
             bloodpressureW = new BPWindow(SocSecNb, logicObj);
             weightW = new WeightWindow(SocSecNb, logicObj);
 
+            Console.WriteLine("Hello World");
             
         }
 

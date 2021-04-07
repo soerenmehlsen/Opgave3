@@ -18,11 +18,11 @@ namespace Opgave2
     /// <summary>
     /// Interaction logic for LoginUI.xaml
     /// </summary>
-    public partial class LoginUI : Window
+    public partial class LoginWindow : Window
     {
         private Logic logicRef;
         private MainWindow mainWRef;
-        public LoginUI(MainWindow mainWRef, Logic logicRef)
+        public LoginWindow(MainWindow mainWRef, Logic logicRef)
         {
             InitializeComponent();
             this.mainWRef = mainWRef;
@@ -37,7 +37,7 @@ namespace Opgave2
         {
             if (logicRef.checkLogin(UserNameTB.Text, passswordBox.Password) == true)
             {
-                LoginWindow.Hide();
+                LoginW.Hide();
                 mainWRef.LoginOK = true;
             }
             else
