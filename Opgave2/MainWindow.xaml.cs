@@ -39,8 +39,6 @@ namespace Opgave2
             bloodpressureW = new BPWindow(SocSecNb, logicObj);
             weightW = new WeightWindow(SocSecNb, logicObj);
 
-            Console.WriteLine("Hello World");
-            
         }
 
         private void exitBT_Click(object sender, RoutedEventArgs e)
