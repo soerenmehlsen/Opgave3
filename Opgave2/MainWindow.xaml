@@ -1,0 +1,330 @@
+﻿<Window x:Name="MainW" x:Class="Opgave2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Opgave2"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="600" 
+        Width="900"
+        FontSize="15"
+        ResizeMode="NoResize"
+        WindowState="Normal"
+        WindowStyle="None"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        Loaded="Window_Loaded" MouseDown="MainW_MouseDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/assets/icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}">
+                <Setter Property="Background" Value="WhiteSmoke"/>
+                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Margin" Value="20,0,-2,0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                            <Border
+                                CornerRadius="10,0,0,10"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="35"/>
+                                        <!--Icon-->
+                                        <ColumnDefinition/>
+                                        <!--Content-->
+                                    </Grid.ColumnDefinitions>
+
+                                    <Path Data="{TemplateBinding Tag}"
+                                          Fill="{TemplateBinding Foreground}"
+                                          Style="{StaticResource {x:Type Path}}"/>
+
+                                    <ContentPresenter
+                                        Grid.Column="1"
+                                        TextBlock.TextAlignment="Left"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        Content="{TemplateBinding Content}"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Background" Value="#E1E4E6"/>
+                                    <Setter Property="Foreground" Value="#FF01A3ff"/>
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border
+        Background="WhiteSmoke"
+        CornerRadius="10">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+                <!--Left panel-->
+                <ColumnDefinition Width="250"/>
+
+                <!--Main content-->
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+
+                <!--Logo-->
+                <TextBlock
+            FontSize="30"
+            Text="File Manager"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+                <Separator
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="LightGray"/>
+
+                <!--Profile button-->
+                <StackPanel
+                    Grid.Row="1"
+                    Width="200"
+                    VerticalAlignment="Center">
+                    <Button
+                    Content="Søren Mehlsen">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Height" Value="50"/>
+                                <Setter Property="Background" Value="LightGray"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Width" Value="200"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border
+                                            CornerRadius="25"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+
+                                                <!--Profil billede-->
+                                                <Grid>
+                                                    <Ellipse
+                                                    HorizontalAlignment="Left"
+                                                    Width="45"
+                                                    Height="45"
+                                                    Stroke="White"
+                                                    StrokeThickness="2"
+                                                    Margin="2,0">
+                                                        <Ellipse.Fill>
+                                                            <ImageBrush
+                                                            Stretch="UniformToFill"
+                                                            ImageSource="/Opgave2;component/Assets/3.jpg"/>
+                                                        </Ellipse.Fill>
+                                                    </Ellipse>
+
+                                                    <!--Profil navn-->
+                                                    <ContentPresenter
+                                                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                                    VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                                    Content="{TemplateBinding Content}"/>
+                                                </Grid>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <!--Pil ikon-->
+                    <Grid Width="67" HorizontalAlignment="Left"
+                            Margin="0,5">
+                        <Button x:Name="LogoutButton"
+                        HorizontalAlignment="Left"
+                        Content="Logout" 
+                        FontSize="15" 
+                        Background="WhiteSmoke"
+                        BorderBrush="WhiteSmoke"
+                        Foreground="Gray"
+                            VerticalAlignment="Center" Click="LogoutButton_Click"/>
+                        <Path
+                            Data="{StaticResource right}"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </StackPanel>
+
+                <Separator
+                    Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="LightGray"/>
+
+                <!--Menu-->
+                <StackPanel
+                    Grid.Row="2"
+                    Margin="0,10">
+                    <RadioButton
+                        IsChecked="True" 
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource home}"
+                        Content="Hjem"/>
+                    <RadioButton x:Name="BPressureButton"
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource statistics}"
+                        Content="Blodtryk" Click="BPressureButton_Click"/>
+                    <RadioButton x:Name="BSugarButton"
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource statistics}"
+                        Content="Blodsukker" Click="BSugarButton_Click"/>
+                    <RadioButton x:Name="WeightButton"
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource statistics}"
+                        Content="Vægt" Click="WeightButton_Click"/>
+                </StackPanel>
+
+                <!--Red Exit button-->
+                <Grid>
+                    <Button 
+                        x:Name="exitBT"
+                        Margin="876,4,-646,70" Click="exitBT_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Height" Value="20"/>
+                                <Setter Property="Background" Value="Red"/>
+                                <Setter Property="Opacity" Value=".7"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Width" Value="20"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border
+                                            CornerRadius="100"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <Button
+           Content="1WeekPanel" Margin="286,89,-236,-195">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Height" Value="200"/>
+                                <Setter Property="Background" Value="LightGray"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Width" Value="200"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border
+                                            CornerRadius="25"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <RadioButton 
+            x:Name="OneWeekRB" 
+            Content="1 uge" 
+            HorizontalAlignment="Left" 
+            Margin="323,109,-193,-65" 
+            VerticalAlignment="Top" 
+            FontSize="30" 
+            VerticalContentAlignment="Center" 
+            FontWeight="Semibold"
+            Foreground="#FF01A3ff" 
+            Padding="10,-1,0,0"
+            Width="120" 
+            Height="50"/>
+                    <RadioButton
+            x:Name="TwoWeekRB"
+            Content="2 uge" 
+            HorizontalAlignment="Left" 
+            Margin="323,159,-193,-115" 
+            VerticalAlignment="Top" 
+            FontSize="30" 
+            VerticalContentAlignment="Center" 
+            FontWeight="Semibold"
+            Foreground="#FF01A3ff" 
+            Padding="10,-1,0,0"
+            Width="120" 
+            Height="50"/>
+
+                    <RadioButton
+            x:Name="FourWeekRB"
+            Content="4 uge" 
+            Margin="323,209,-193,-165" 
+            VerticalAlignment="Top" 
+            FontSize="30" 
+            VerticalContentAlignment="Center" 
+            FontWeight="Semibold"
+            Foreground="#FF01A3ff" 
+            Padding="10,-1,0,0" HorizontalAlignment="Left" 
+            Width="120" 
+            Height="50"/>
+                </Grid>
+
+                <Grid Margin="260,44,-260,42" Grid.Row="2">
+                    <Border Grid.Row="5"
+                Height="50" 
+                Width="200"
+                Background="#FF01A3ff"
+                VerticalAlignment="Center"
+                CornerRadius="10"
+                BorderThickness="1">
+
+                        <Button 
+                    x:Name="SendButton"
+                    Content="Send"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Background="Transparent"
+                    BorderBrush="Transparent" Click="SendButton_Click"/>
+
+                    </Border>
+                </Grid>
+
+            </Grid>
+            <Label Content="Vælg uger" Grid.Column="1" HorizontalAlignment="Left" Margin="62,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
+        </Grid>
+    </Border>
+</Window>

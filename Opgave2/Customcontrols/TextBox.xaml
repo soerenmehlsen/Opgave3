@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Opgave2.TextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Opgave2"
+             mc:Ignorable="d" 
+             MinWidth="300"
+             x:Name="_this">
+
+    <UserControl.Resources>
+        <Style x:Key="credentialTxttitleStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#a3a3a4"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Text" Value=""/>
+            <Setter Property="Padding" Value="2,0"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Text, ElementName=email}" Value="">
+
+                    <!--Position og tekststørrelse på titlen-->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+
+                    <!--Position og tekststørrelse på titlen når den har en værdi-->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="15"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 0 0 30"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="credentialsTxTStyle" TargetType="{x:Type TextBlock}">
+            
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <!--<Setter Property="BorderThickness" Value="0"/>-->
+        </Style>
+    </UserControl.Resources>
+    
+    <Border
+        CornerRadius="10"
+        Background="White"
+        Height="70">
+        
+        <!--Skygge effekt-->
+        <Border.Effect>
+            <DropShadowEffect
+                BlurRadius="23"
+                ShadowDepth="5"
+                Direction="270"
+                Color="WhiteSmoke"/>
+        </Border.Effect>
+        <Grid Margin="20,6">
+            <!--Titel-->
+        <TextBlock
+            x:Name="titel"
+            Style="{StaticResource credentialTxttitleStyle}"/>
+        
+        <!--Teksboks-->
+        <TextBlock
+            x:Name="email"
+            Style="{StaticResource credentialsTxTStyle}"/>
+        </Grid>
+    </Border>
+</UserControl>
