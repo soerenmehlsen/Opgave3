@@ -97,7 +97,7 @@
                 <!--Logo-->
                 <TextBlock
             FontSize="30"
-            Text="File Manager"
+            Text="Din Sundhed"
             FontWeight="Bold"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"/>

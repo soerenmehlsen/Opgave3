@@ -22,7 +22,7 @@ namespace Opgave2
     public partial class MainWindow : Window
     {
         private Logic logicObj;
-        private LoginWindow loginW; //LoginUI skal laves om til LoginWindow
+        private LoginWindow loginW; 
         private BSWindow bloodsugarW;
         private BPWindow bloodpressureW;
         private WeightWindow weightW;
