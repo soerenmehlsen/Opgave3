@@ -112,7 +112,7 @@
                     Width="200"
                     VerticalAlignment="Center">
                     <Button
-                    Content="Søren Mehlsen">
+                    Content="Bruger1">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Height" Value="50"/>

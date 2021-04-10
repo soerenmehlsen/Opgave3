@@ -55,5 +55,10 @@ namespace Opgave2
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void exitLoginBT_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
