@@ -116,14 +116,12 @@
             <!--Velkommen besked-->
             <TextBlock Grid.Row="1"
                 VerticalAlignment="Center"
+                HorizontalAlignment="Center"
                 FontSize="30">
                 <Run
                     FontWeight="Semibold"
-                    Text="Velkommen tilbage"/>
-                <Run Text="Bruger1!"
-                     FontWeight="Bold"
-                     x:Name="userName"/>
-            </TextBlock>
+                    Text="Velkommen tilbage!"/>
+                </TextBlock>
 
             <!-- Email tekstboks-->
             <local:TextBox Grid.Row="2" />

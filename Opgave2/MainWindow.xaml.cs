@@ -26,8 +26,8 @@ namespace Opgave2
         private BSWindow bloodsugarW;
         private BPWindow bloodpressureW;
         private WeightWindow weightW;
-        public string SocSecNb { get; set; } //property
-        public bool LoginOK { get; set; } //property
+        public string SocSecNb { get; set; } 
+        public bool LoginOK { get; set; } 
         public MainWindow()
         {
             InitializeComponent();
@@ -54,18 +54,18 @@ namespace Opgave2
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //MainW.Hide();
-            //loginW.ShowDialog();
+            MainW.Hide();
+            loginW.ShowDialog();
 
-            //if (LoginOK == true)
-            //{
-            //    MainW.Show();
-                
-            //}
-            //if (LoginOK == false)
-            //{
-            //    MainW.Close();
-            //}
+            if (LoginOK == true)
+            {
+                MainW.Show();
+
+            }
+            if (LoginOK == false)
+            {
+                MainW.Close();
+            }
 
         }
 
