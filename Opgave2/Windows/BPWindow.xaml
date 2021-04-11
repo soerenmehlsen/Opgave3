@@ -6,9 +6,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Opgave2"
         mc:Ignorable="d"
-        Title="Blodtryk" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
-        <lvc:CartesianChart Name="BPChart" LegendLocation="Bottom" Margin="90,40,10,40"  Loaded="BPChart_Loaded">
+        x:Name="BPressureWindow"
+        Title="Blodtryk" 
+        Height="450" 
+        Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Loaded="Window_Loaded" 
+        MouseDown="BPressureWindow_MouseDown">
+    <Border
+        Background="WhiteSmoke"
+        CornerRadius="20">
+        
+        <Grid x:Name="BPGrid">
+        <lvc:CartesianChart Name="BPChart" LegendLocation="Bottom" Margin="51,53,49,27"  Loaded="BPChart_Loaded">
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries Title="Sytolisk blodtryk"  Values="{Binding YValues1}" />
                 <lvc:LineSeries Title="Diastolisk blodtryk"  Values="{Binding YValues2}" />
@@ -16,6 +29,43 @@
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues2}" />
             </lvc:CartesianChart.AxisX>
-        </lvc:CartesianChart>
-    </Grid>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="mmHg"/>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+            <Label 
+                Content="Dit Blodtryk" 
+                HorizontalAlignment="Left" 
+                Margin="325,11,0,0" 
+                VerticalAlignment="Top" 
+                FontWeight="Bold" 
+                FontSize="24"/>
+            <Button 
+              x:Name="exitBPBT"
+              Click="exitBPBT_Click" Margin="770,11,10,419">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Height" Value="20"/>
+                        <Setter Property="Background" Value="Red"/>
+                        <Setter Property="Opacity" Value=".7"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Width" Value="20"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border
+                                            CornerRadius="100"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+    </Border>
 </Window>

@@ -53,5 +53,16 @@ namespace Opgave2
 
             DataContext = this;
         }
+
+        private void exitWeightBT_Click(object sender, RoutedEventArgs e)
+        {
+            WWindow.Hide();
+        }
+
+        private void WWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
     }
 }

@@ -54,18 +54,18 @@ namespace Opgave2
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainW.Hide();
-            loginW.ShowDialog();
+            //MainW.Hide();
+            //loginW.ShowDialog();
 
-            if (LoginOK == true)
-            {
-                MainW.Show();
+            //if (LoginOK == true)
+            //{
+            //    MainW.Show();
                 
-            }
-            if (LoginOK == false)
-            {
-                MainW.Close();
-            }
+            //}
+            //if (LoginOK == false)
+            //{
+            //    MainW.Close();
+            //}
 
         }
 

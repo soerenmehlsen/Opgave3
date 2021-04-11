@@ -58,5 +58,16 @@ namespace Opgave2
                 XValues2.Add(Convert.ToString($"{x.Date}"));
             }
         }
+
+        private void BPressureWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void exitBPBT_Click(object sender, RoutedEventArgs e)
+        {
+            BPressureWindow.Hide();
+        }
     }
 }

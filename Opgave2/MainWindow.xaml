@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="600" 
-        Width="900"
+        Width="700"
         FontSize="15"
         ResizeMode="NoResize"
         WindowState="Normal"
@@ -213,7 +213,7 @@
                 <Grid>
                     <Button 
                         x:Name="exitBT"
-                        Margin="876,4,-646,70" Click="exitBT_Click">
+                        Margin="672,8,-442,66" Click="exitBT_Click" RenderTransformOrigin="-6.55,0.75">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Height" Value="20"/>
@@ -239,7 +239,7 @@
                     </Button>
 
                     <Button
-           Content="1WeekPanel" Margin="286,89,-236,-195">
+           Content="1WeekPanel" Margin="320,142,-270,-248">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Height" Value="200"/>
@@ -266,7 +266,7 @@
             x:Name="OneWeekRB" 
             Content="1 uge" 
             HorizontalAlignment="Left" 
-            Margin="323,109,-193,-65" 
+            Margin="357,162,-227,-118" 
             VerticalAlignment="Top" 
             FontSize="30" 
             VerticalContentAlignment="Center" 
@@ -279,7 +279,7 @@
             x:Name="TwoWeekRB"
             Content="2 uge" 
             HorizontalAlignment="Left" 
-            Margin="323,159,-193,-115" 
+            Margin="357,212,-227,-168" 
             VerticalAlignment="Top" 
             FontSize="30" 
             VerticalContentAlignment="Center" 
@@ -292,7 +292,7 @@
                     <RadioButton
             x:Name="FourWeekRB"
             Content="4 uge" 
-            Margin="323,209,-193,-165" 
+            Margin="357,262,-227,-218" 
             VerticalAlignment="Top" 
             FontSize="30" 
             VerticalContentAlignment="Center" 
@@ -304,13 +304,13 @@
                 </Grid>
 
                 <Grid Margin="260,44,-260,42" Grid.Row="2">
-                    <Border Grid.Row="5"
+                    <Border
                 Height="50" 
                 Width="200"
                 Background="#FF01A3ff"
                 VerticalAlignment="Center"
                 CornerRadius="10"
-                BorderThickness="1">
+                BorderThickness="1" Margin="59,75,-9,-31">
 
                         <Button 
                     x:Name="SendButton"
@@ -324,7 +324,7 @@
                 </Grid>
 
             </Grid>
-            <Label Content="Vælg uger" Grid.Column="1" HorizontalAlignment="Left" Margin="62,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
+            <Label Content="Vælg uger" Grid.Column="1" HorizontalAlignment="Left" Margin="96,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
         </Grid>
     </Border>
 </Window>

@@ -58,5 +58,15 @@ namespace Opgave2
             }
 
         }
+        private void exitBSBT_Click(object sender, RoutedEventArgs e)
+        {
+            BSugarWindow.Hide();
+        }
+
+        private void BSugarWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
     }
 }
