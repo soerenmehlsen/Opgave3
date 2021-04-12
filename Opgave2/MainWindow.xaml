@@ -163,7 +163,7 @@
                             Margin="0,5">
                         <Button x:Name="LogoutButton"
                         HorizontalAlignment="Left"
-                        Content="Logout" 
+                        Content="Log af" 
                         FontSize="15" 
                         Background="WhiteSmoke"
                         BorderBrush="WhiteSmoke"

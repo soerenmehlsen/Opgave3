@@ -44,7 +44,7 @@ namespace Opgave2
 
             List<DTO_Weight> weightList = logicRef.getWeightAndBMIData("SocSecNb");
 
-            foreach (var x in weightList)
+            foreach (DTO_Weight x in weightList)
             {
                 YValues3.Add(Convert.ToDouble($"{x.Weight}"));
                 YValues4.Add(Convert.ToDouble($"{x.BMI}"));

@@ -212,7 +212,7 @@
                 VerticalAlignment="Bottom" Margin="0,2">
                 <Hyperlink
                     TextDecorations="None">
-                    Forgot your password?
+                    Har du glemt din konto?
                 </Hyperlink>
             </TextBlock>
 
