@@ -27,28 +27,21 @@ namespace Opgave2
         private string SocSecNb;
         public ChartValues<double> YValues1 { get; set; }
         public ChartValues<double> YValues2 { get; set; }
-        public List<String> XValues2 { get; set; }
+        public List<string> XValues2 { get; set; }
         public BPWindow(string SocSecNb, Logic logicRef)
         {
             InitializeComponent();
             this.SocSecNb = SocSecNb;
             this.logicRef = logicRef;
-
-            YValues1 = new ChartValues<double>();
-            YValues2 = new ChartValues<double>();
-            XValues2 = new List<String>();
-            
         }
 
-        private void BPChart_Loaded(object sender, RoutedEventArgs e)
-        {
-            DataContext = this;
-        }
-
-        
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            YValues1 = new ChartValues<double>();
+            YValues2 = new ChartValues<double>();
+            XValues2 = new List<string>();
+
             List<DTO_BPressure> bpList = logicRef.getBPressureData(SocSecNb);
 
             foreach (var x in bpList)
@@ -56,7 +49,9 @@ namespace Opgave2
                 YValues1.Add(Convert.ToDouble($"{x.Systolic}"));
                 YValues2.Add(Convert.ToDouble($"{x.Diastolic}"));
                 XValues2.Add(Convert.ToString($"{x.Date}"));
+
             }
+            DataContext = this;
         }
 
         private void BPressureWindow_MouseDown(object sender, MouseButtonEventArgs e)

@@ -22,34 +22,23 @@ namespace Opgave2
     public partial class MainWindow : Window
     {
         private Logic logicObj;
-        private LoginWindow loginW; 
+        private LoginWindow loginW;
         private BSWindow bloodsugarW;
         private BPWindow bloodpressureW;
         private WeightWindow weightW;
-        public string SocSecNb { get; set; } 
-        public bool LoginOK { get; set; } 
+        public string SocSecNb { get; set; }
+        public bool LoginOK { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             logicObj = new Logic();
             loginW = new LoginWindow(this, logicObj);
-            
+
 
             bloodsugarW = new BSWindow(SocSecNb, logicObj);
             bloodpressureW = new BPWindow(SocSecNb, logicObj);
             weightW = new WeightWindow(SocSecNb, logicObj);
 
-        }
-
-        private void exitBT_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void BSugarButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-            bloodsugarW.ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -69,15 +58,21 @@ namespace Opgave2
 
         }
 
-        private void BPressureButton_Click(object sender, RoutedEventArgs e)
+        private void bsButton_Click(object sender, RoutedEventArgs e)
+        {
+            bloodsugarW.ShowDialog();
+        }
+
+        private void bpButton_Click(object sender, RoutedEventArgs e)
         {
             bloodpressureW.ShowDialog();
         }
 
-        private void WeightButton_Click(object sender, RoutedEventArgs e)
+        private void weightButton_Click(object sender, RoutedEventArgs e)
         {
             weightW.ShowDialog();
         }
+
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
@@ -109,6 +104,11 @@ namespace Opgave2
         {
             loginW.Show();
             MainW.Hide();
+        }
+
+        private void exitBT_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

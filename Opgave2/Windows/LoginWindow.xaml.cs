@@ -27,8 +27,7 @@ namespace Opgave2
             InitializeComponent();
             this.mainWRef = mainWRef;
             this.logicRef = logicRef;
-            //logicRef = new Logic();
-            
+
             UserNameTB.Focus();
             UserNameTB.SelectAll();
         }
@@ -59,6 +58,11 @@ namespace Opgave2
         private void exitLoginBT_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void passswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            passswordBox.SelectAll();
         }
     }
 }

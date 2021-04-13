@@ -27,7 +27,7 @@ namespace Opgave2
         private string SocSecNb;
         public ChartValues<double> YValues { get; set; }
         public List<string> XValues { get; set; }
-        
+
 
         public BSWindow(string SocSecNb, Logic logicRef)
         {
@@ -35,19 +35,12 @@ namespace Opgave2
             this.SocSecNb = SocSecNb;
             this.logicRef = logicRef;
 
-            YValues = new ChartValues<double>();
-            XValues = new List<string>();
-
-
-        }
-
-        private void BSChart_Loaded(object sender, RoutedEventArgs e)
-        {
-            DataContext = this;
         }
 
         private void BSWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            YValues = new ChartValues<double>();
+            XValues = new List<string>();
 
             List<DTO_BSugar> bsList = logicRef.getBSugarData(SocSecNb);
 
@@ -56,7 +49,7 @@ namespace Opgave2
                 YValues.Add(Convert.ToDouble(x.BloodSugar));
                 XValues.Add(Convert.ToString(x.Date));
             }
-
+            DataContext = this;
         }
         private void exitBSBT_Click(object sender, RoutedEventArgs e)
         {

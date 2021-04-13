@@ -26,19 +26,19 @@
         Background="WhiteSmoke"
         BorderBrush="Gray"
         BorderThickness="0.3">
-        
+
         <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition 
+            <Grid.RowDefinitions>
+                <RowDefinition 
                 Height="70"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
 
 
-        <!--Titel-->
-        <TextBlock
+            <!--Titel-->
+            <TextBlock
                 Margin="35,0"
                 FontSize="30"
                 HorizontalAlignment="Left"
@@ -48,7 +48,7 @@
                 <Run
                     FontWeight="Bold"
                     Text="Login"/>
-        </TextBlock>
+            </TextBlock>
 
             <Button 
               x:Name="exitLoginBT"
@@ -79,42 +79,42 @@
 
 
             <!--LoginUI-->
-        <Grid Grid.Row="1"
+            <Grid Grid.Row="1"
               Width="400"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <!--Profil billede-->
-                <RowDefinition Height="100"/>
-                <!--username-->
-                <RowDefinition Height="100"/>
-                <!--email-->
-                <RowDefinition Height="100"/>
-                <!--password-->
-                <RowDefinition/>
-                <!--button-->
-                <RowDefinition Height="100"/>
-                <!--note-->
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <!--Profil billede-->
+                    <RowDefinition Height="100"/>
+                    <!--username-->
+                    <RowDefinition Height="100"/>
+                    <!--email-->
+                    <RowDefinition Height="100"/>
+                    <!--password-->
+                    <RowDefinition/>
+                    <!--button-->
+                    <RowDefinition Height="100"/>
+                    <!--note-->
+                </Grid.RowDefinitions>
 
-            <!--Profil billede-->
-            <StackPanel
+                <!--Profil billede-->
+                <StackPanel
                 Grid.Column="1">
-                <Ellipse
+                    <Ellipse
                     Width="100"
                     Height="100"
                     HorizontalAlignment="Center">
-                    <Ellipse.Fill>
-                        <ImageBrush
+                        <Ellipse.Fill>
+                            <ImageBrush
                             Stretch="UniformToFill"
                             ImageSource="/Opgave2;component/Assets/3.jpg"/>
-                    </Ellipse.Fill>
-                </Ellipse>
-            </StackPanel>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </StackPanel>
 
-            <!--Velkommen besked-->
-            <TextBlock Grid.Row="1"
+                <!--Velkommen besked-->
+                <TextBlock Grid.Row="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 FontSize="30">
@@ -123,25 +123,25 @@
                     Text="Velkommen tilbage!"/>
                 </TextBlock>
 
-            <!-- Email tekstboks-->
-            <local:TextBox Grid.Row="2" />
-            <!--Custom textbox-->
-            <Border Grid.Row="2">
+                <!-- Email tekstboks-->
+                <local:TextBox Grid.Row="2" />
+                <!--Custom textbox-->
+                <Border Grid.Row="2">
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
-                    <!--email Ikon-->
-                    <Path
+                        <!--email Ikon-->
+                        <Path
                         Width="25"
                         Height="25"
                         Data="{StaticResource account}"
                         Fill="Silver"/>
 
-                    <TextBox 
+                        <TextBox 
                     x:Name="UserNameTB"
                     BorderThickness="0"
                     Foreground="#a3a3a4"
@@ -151,28 +151,28 @@
                     HorizontalAlignment="Left"
                     Padding="2,0"/>
 
-                </Grid>
-            </Border>
+                    </Grid>
+                </Border>
 
-            <!-- Password tekstboks-->
-            <local:TextBox Grid.Row="3" />
-            <!--Custom textbox-->
-            <Border Grid.Row="3">
+                <!-- Password tekstboks-->
+                <local:TextBox Grid.Row="3" />
+                <!--Custom textbox-->
+                <Border Grid.Row="3">
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
-                    <!--Password Ikon-->
-                    <Path
+                        <!--Password Ikon-->
+                        <Path
                         Width="25"
                         Height="25"
                         Data="{StaticResource pass_icon}"
                         Fill="Silver"/>
 
-                    <PasswordBox 
+                        <PasswordBox 
                     x:Name="passswordBox"
                     BorderThickness="0"
                     Foreground="#a3a3a4"
@@ -180,13 +180,13 @@
                     Password="Kode123" FontSize="20"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
-                    Padding="2,0"/>
+                    Padding="2,0" GotFocus="passswordBox_GotFocus"/>
 
-                </Grid>
-            </Border>
+                    </Grid>
+                </Border>
 
-            <!--Login knap-->
-            <Border Grid.Row="5"
+                <!--Login knap-->
+                <Border Grid.Row="5"
                 Height="50" 
                 Width="200"
                 Background="#FF01A3ff"
@@ -194,7 +194,7 @@
                 CornerRadius="10"
                 BorderThickness="1">
 
-                <Button
+                    <Button
                     x:Name="LoginButton"
                     Content="Login"
                     FontWeight="SemiBold"
@@ -203,10 +203,10 @@
                     BorderBrush="Transparent" 
                     Click="LoginButton_Click"/>
 
-            </Border>
+                </Border>
 
-            <!--Glemt password-->
-            <TextBlock
+                <!--Glemt password-->
+                <TextBlock
                 Grid.Row="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom" Margin="0,2">
@@ -214,10 +214,8 @@
                     TextDecorations="None">
                     Har du glemt din konto?
                 </Hyperlink>
-            </TextBlock>
-
-        </Grid>
-
+                </TextBlock>
+            </Grid>
         </Grid>
     </Border>
 </Window>

@@ -18,30 +18,30 @@
     <Border
         Background="WhiteSmoke"
         CornerRadius="20">
-    <Grid>
-        <lvc:CartesianChart Name="WChart" LegendLocation="Bottom" Margin="386,53,10,10" >
-            <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Vægt"  Values="{Binding YValues3}" />
-            </lvc:CartesianChart.Series>
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues1}" />
-            </lvc:CartesianChart.AxisX>
+        <Grid>
+            <lvc:CartesianChart Name="WChart" LegendLocation="Bottom" Margin="386,53,10,10" >
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Title="Vægt" Values="{Binding YValues3}" />
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues1}" />
+                </lvc:CartesianChart.AxisX>
                 <lvc:CartesianChart.AxisY>
                     <lvc:Axis Title="Vægt (kg)"/>
                 </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
 
-        <lvc:CartesianChart Name="BMIChart" LegendLocation="Bottom" Margin="10,53,435,10" >
-            <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="BMI"  Values="{Binding YValues4}" />
-            </lvc:CartesianChart.Series>
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues1}">
-                <lvc:Axis.Separator>
-                    <lvc:Separator IsEnabled="True" Step="1"></lvc:Separator>
-                </lvc:Axis.Separator>
-                </lvc:Axis>
-            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart Name="BMIChart" LegendLocation="Bottom" Margin="10,53,435,10" >
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Title="BMI" Fill="Red" Values="{Binding YValues4}" />
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues1}">
+                        <lvc:Axis.Separator>
+                            <lvc:Separator IsEnabled="True" Step="1"></lvc:Separator>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
                 <lvc:CartesianChart.AxisY>
                     <lvc:Axis Title="BMI (kg/m^2)"/>
                 </lvc:CartesianChart.AxisY>

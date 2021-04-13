@@ -27,22 +27,22 @@ namespace Opgave2
         private string SocSecNb;
         public ChartValues<double> YValues3 { get; set; }
         public ChartValues<double> YValues4 { get; set; }
-        public List<String> XValues1 { get; set; }
+        public List<string> XValues1 { get; set; }
         public WeightWindow(string SocSecNb, Logic logicRef)
         {
             InitializeComponent();
             this.SocSecNb = SocSecNb;
             this.logicRef = logicRef;
 
-            YValues3 = new ChartValues<double>();
-            YValues4 = new ChartValues<double>();
-            XValues1 = new List<String>();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            YValues3 = new ChartValues<double>();
+            YValues4 = new ChartValues<double>();
+            XValues1 = new List<string>();
 
-            List<DTO_Weight> weightList = logicRef.getWeightAndBMIData("SocSecNb");
+            List<DTO_Weight> weightList = logicRef.getWeightAndBMIData(SocSecNb);
 
             foreach (DTO_Weight x in weightList)
             {

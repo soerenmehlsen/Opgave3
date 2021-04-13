@@ -19,16 +19,16 @@
     <Border
         Background="WhiteSmoke"
         CornerRadius="20">
-        
+
         <Grid x:Name="BPGrid">
-        <lvc:CartesianChart Name="BPChart" LegendLocation="Bottom" Margin="51,53,49,27"  Loaded="BPChart_Loaded">
-            <lvc:CartesianChart.Series>
-                <lvc:LineSeries Title="Sytolisk blodtryk"  Values="{Binding YValues1}" />
-                <lvc:LineSeries Title="Diastolisk blodtryk"  Values="{Binding YValues2}" />
-            </lvc:CartesianChart.Series>
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues2}" />
-            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart Name="BPChart" LegendLocation="Bottom" Margin="51,53,49,27"  >
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Title="Sytolisk blodtryk"  Values="{Binding YValues1}" />
+                    <lvc:ColumnSeries Title="Diastolisk blodtryk"  Values="{Binding YValues2}" />
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Dato" LabelsRotation="-45" Labels="{Binding XValues2}" />
+                </lvc:CartesianChart.AxisX>
                 <lvc:CartesianChart.AxisY>
                     <lvc:Axis Title="mmHg"/>
                 </lvc:CartesianChart.AxisY>

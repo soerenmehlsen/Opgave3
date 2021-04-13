@@ -192,21 +192,21 @@
                         Style="{StaticResource MenuButtonStyle}"
                         Tag="{StaticResource home}"
                         Content="Hjem"/>
-                    <RadioButton x:Name="BPressureButton"
+                    <RadioButton x:Name="bpButton"
                         GroupName="Menu"
                         Style="{StaticResource MenuButtonStyle}"
                         Tag="{StaticResource statistics}"
-                        Content="Blodtryk" Click="BPressureButton_Click"/>
-                    <RadioButton x:Name="BSugarButton"
+                        Content="Blodtryk" Click="bpButton_Click"/>
+                    <RadioButton x:Name="bsButton"
                         GroupName="Menu"
                         Style="{StaticResource MenuButtonStyle}"
                         Tag="{StaticResource statistics}"
-                        Content="Blodsukker" Click="BSugarButton_Click"/>
-                    <RadioButton x:Name="WeightButton"
+                        Content="Blodsukker" Click="bsButton_Click"/>
+                    <RadioButton x:Name="weightButton"
                         GroupName="Menu"
                         Style="{StaticResource MenuButtonStyle}"
                         Tag="{StaticResource statistics}"
-                        Content="Vægt" Click="WeightButton_Click"/>
+                        Content="Vægt" Click="weightButton_Click"/>
                 </StackPanel>
 
                 <!--Red Exit button-->
