@@ -44,10 +44,10 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
                 <Run
-                    Text="Smart"/>
+                    Text="Login"/>
                 <Run
                     FontWeight="Bold"
-                    Text="Login"/>
+                    Text="System"/>
             </TextBlock>
 
             <Button 
