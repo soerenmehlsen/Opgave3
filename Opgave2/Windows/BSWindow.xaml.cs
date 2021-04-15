@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
-using Logic_tier;
+using LogicLayer;
 using DTO;
 
 namespace PresentationLayer
@@ -24,15 +24,15 @@ namespace PresentationLayer
     public partial class BSWindow : Window
     {
         private Logic logicRef;
-        private string SocSecNb;
+        private String socSecNb;
         public ChartValues<double> YValues { get; set; }
         public List<string> XValues { get; set; }
 
 
-        public BSWindow(string SocSecNb, Logic logicRef)
+        public BSWindow(String SocSecNb, Logic logicRef)
         {
             InitializeComponent();
-            this.SocSecNb = SocSecNb;
+            socSecNb = SocSecNb;
             this.logicRef = logicRef;
 
         }
@@ -42,7 +42,7 @@ namespace PresentationLayer
             YValues = new ChartValues<double>();
             XValues = new List<string>();
 
-            List<DTO_BSugar> bsList = logicRef.getBSugarData(SocSecNb);
+            List<DTO_BSugar> bsList = logicRef.getBSugarData(socSecNb);
 
             foreach (var x in bsList)
             {

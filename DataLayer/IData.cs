@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 
-
 namespace DataLayer
 {
-    abstract class IData
+      abstract public class IData
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
 
         abstract public bool isUserRegistered(String socSecNb, String pw);
@@ -23,6 +21,6 @@ namespace DataLayer
 
         abstract public List<DTO_BSugar> getBSugarData(String socSecNb);
 
-        abstract public  List<DTO_BPressure> getBPressureData(String socSecNb);
+        abstract public List<DTO_BPressure> getBPressureData(String socSecNb);
     }
 }

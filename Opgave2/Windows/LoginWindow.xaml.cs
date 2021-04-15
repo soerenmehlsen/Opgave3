@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Logic_tier;
+using LogicLayer;
 
 namespace PresentationLayer
 {
@@ -34,10 +34,11 @@ namespace PresentationLayer
 
         private void LoginButton_Click(object sender, RoutedEventArgs e) //Check brugernavn og password
         {
-            if (logicRef.checkLogin(UserNameTB.Text, passswordBox.Password) == true)
+            if (logicRef.CheckLogin(UserNameTB.Text, passswordBox.Password) == true)
             {
                 LoginW.Hide();
                 mainWRef.LoginOK = true;
+                mainWRef.SocSecNb = UserNameTB.Text;
             }
             else
             {

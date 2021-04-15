@@ -26,7 +26,7 @@ namespace PresentationLayer
         private BSWindow bloodsugarW;
         private BPWindow bloodpressureW;
         private WeightWindow weightW;
-        public string SocSecNb { get; set; }
+        public String SocSecNb { get; set; }
         public bool LoginOK { get; set; }
         public MainWindow()
         {
@@ -35,9 +35,9 @@ namespace PresentationLayer
             loginW = new LoginWindow(this, logicObj);
 
 
-            bloodsugarW = new BSWindow(SocSecNb, logicObj);
-            bloodpressureW = new BPWindow(SocSecNb, logicObj);
-            weightW = new WeightWindow(SocSecNb, logicObj);
+           // bloodsugarW = new BSWindow(SocSecNb, logicObj);
+            //bloodpressureW = new BPWindow(SocSecNb, logicObj);
+            //weightW = new WeightWindow(SocSecNb, logicObj);
 
         }
 
@@ -60,16 +60,19 @@ namespace PresentationLayer
 
         private void bsButton_Click(object sender, RoutedEventArgs e)
         {
+            bloodsugarW = new BSWindow(SocSecNb, logicObj);
             bloodsugarW.ShowDialog();
         }
 
         private void bpButton_Click(object sender, RoutedEventArgs e)
         {
+            bloodpressureW = new BPWindow(SocSecNb, logicObj);
             bloodpressureW.ShowDialog();
         }
 
         private void weightButton_Click(object sender, RoutedEventArgs e)
         {
+            weightW = new WeightWindow(SocSecNb, logicObj);
             weightW.ShowDialog();
         }
 

@@ -64,7 +64,6 @@
     <Compile Include="Customcontrols\TextBox.xaml.cs">
       <DependentUpon>TextBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LogicStump.cs" />
     <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -148,8 +147,12 @@
     <Resource Include="Assets\profilbillede.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{ae8cd645-6668-4926-a6be-c44faab007eb}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
-      <Project>{332e84f9-65d0-46c0-a45f-82d8372d0ddf}</Project>
+      <Project>{fda67d74-952c-4890-aecc-b32bfce39409}</Project>
       <Name>LogicLayer</Name>
     </ProjectReference>
   </ItemGroup>

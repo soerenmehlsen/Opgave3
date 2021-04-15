@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
-using Logic_tier;
+using LogicLayer;
 using DTO;
 
 namespace PresentationLayer
@@ -24,14 +24,14 @@ namespace PresentationLayer
     public partial class WeightWindow : Window
     {
         private Logic logicRef;
-        private string SocSecNb;
+        private String socSecNb;
         public ChartValues<double> YValues3 { get; set; }
         public ChartValues<double> YValues4 { get; set; }
         public List<string> XValues1 { get; set; }
         public WeightWindow(string SocSecNb, Logic logicRef)
         {
             InitializeComponent();
-            this.SocSecNb = SocSecNb;
+            this.socSecNb = SocSecNb;
             this.logicRef = logicRef;
 
         }
@@ -42,9 +42,9 @@ namespace PresentationLayer
             YValues4 = new ChartValues<double>();
             XValues1 = new List<string>();
 
-            List<DTO_Weight> weightList = logicRef.getWeightAndBMIData(SocSecNb);
+            List<DTO_Weight> weightList = logicRef.getWeightAndBMIData(socSecNb);
 
-            foreach (DTO_Weight x in weightList)
+            foreach (var x in weightList)
             {
                 YValues3.Add(Convert.ToDouble($"{x.Weight}"));
                 YValues4.Add(Convert.ToDouble($"{x.BMI}"));
