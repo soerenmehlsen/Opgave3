@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Opgave2
+namespace PresentationLayer
 {
     /// <summary>
     /// Interaction logic for TextBox.xaml

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Logic_tier;
 
-namespace Opgave2
+namespace PresentationLayer
 {
     /// <summary>
     /// Interaction logic for LoginUI.xaml

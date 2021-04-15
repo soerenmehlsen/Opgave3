@@ -64,9 +64,6 @@
     <Compile Include="Customcontrols\TextBox.xaml.cs">
       <DependentUpon>TextBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DTO_BPressure.cs" />
-    <Compile Include="DTO_BSugar.cs" />
-    <Compile Include="DTO_Weight.cs" />
     <Compile Include="LogicStump.cs" />
     <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -149,6 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\profilbillede.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{332e84f9-65d0-46c0-a45f-82d8372d0ddf}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

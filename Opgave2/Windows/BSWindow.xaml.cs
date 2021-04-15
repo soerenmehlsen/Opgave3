@@ -16,7 +16,7 @@ using LiveCharts.Wpf;
 using Logic_tier;
 using DTO;
 
-namespace Opgave2
+namespace PresentationLayer
 {
     /// <summary>
     /// Interaction logic for Bloodsugar.xaml
