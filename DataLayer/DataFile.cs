@@ -14,9 +14,9 @@ namespace DataLayer
         private StreamReader reader;
         // Herunder KAN du skrive en sti til den mappe hvori er gemt.
         // MEN i fht. OPGAVE 3 SKAL filerne placeres korrekt i PROJEKTET - ellers virker det ikke når du afleverer opgaven.
-        //private const String filepath = @"\\C:\Users\Søren Mehlsen\source\repos\Opgave2\DataLayer\bin\Debug\";
-
-        public DataFile() {}
+        //private const String filepath = @"\\C:\Users\Søren Mehlsen\source\repos\Opgave2\Opgave2\bin\Debug";
+        //Jeg har valgt at lade programmet gemme filerne i debug mappen, som er standard.
+        public DataFile() { }
 
         public override bool isUserRegistered(String socSecNb, String pw)
         {
@@ -40,13 +40,12 @@ namespace DataLayer
             }
 
             reader.Close();
-            
+
             return result;
         }
 
         public override int getHeight(String socSecNb)
         {
-            //List<Person> contacts = new List<Person>();
             int result = 0;
             // string-objekter til at gemme det som læses fra filen
             string inputRecord;

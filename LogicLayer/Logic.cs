@@ -22,7 +22,7 @@ namespace LogicLayer
 
         public bool CheckLogin(String socSecNb, String pw)
         {
-            if (dataObject.isUserRegistered(socSecNb,pw) == true)
+            if (dataObject.isUserRegistered(socSecNb, pw) == true)
             {
                 return true;
             }
@@ -30,18 +30,18 @@ namespace LogicLayer
             {
                 return false;
             }
-             
+
         }
 
         public List<DTO_Weight> getWeightAndBMIData(String socSecNb)
         {
-            double height; 
+            double height;
             List<DTO_Weight> weightList = dataObject.getWeightData(socSecNb);
             height = dataObject.getHeight(socSecNb);
 
             foreach (DTO_Weight x in weightList)
             {
-               x.BMI = Convert.ToInt32(x.Weight) / Convert.ToInt32((height/100) * (height/100));
+                x.BMI = Convert.ToInt32(x.Weight) / Convert.ToInt32((height / 100) * (height / 100));
             }
 
             return weightList;

@@ -112,7 +112,7 @@
                     Width="200"
                     VerticalAlignment="Center">
                     <Button
-                    Content="Bruger1">
+                    Content="{Binding Username}">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Height" Value="50"/>

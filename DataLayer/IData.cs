@@ -7,7 +7,7 @@ using DTO;
 
 namespace DataLayer
 {
-      abstract public class IData
+    abstract public class IData
     {
         static void Main(string[] args)
         {

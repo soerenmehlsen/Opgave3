@@ -28,17 +28,12 @@ namespace PresentationLayer
         private WeightWindow weightW;
         public String SocSecNb { get; set; }
         public bool LoginOK { get; set; }
+        public String Username { get; set; } //property (visning af brugernavn på hovedmenu)
         public MainWindow()
         {
             InitializeComponent();
             logicObj = new Logic();
             loginW = new LoginWindow(this, logicObj);
-
-
-           // bloodsugarW = new BSWindow(SocSecNb, logicObj);
-            //bloodpressureW = new BPWindow(SocSecNb, logicObj);
-            //weightW = new WeightWindow(SocSecNb, logicObj);
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -49,13 +44,14 @@ namespace PresentationLayer
             if (LoginOK == true)
             {
                 MainW.Show();
+                Username = SocSecNb; //Visning af brugernavn på hovedmenu
 
             }
             if (LoginOK == false)
             {
                 MainW.Close();
             }
-
+            DataContext = this;
         }
 
         private void bsButton_Click(object sender, RoutedEventArgs e)
