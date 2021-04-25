@@ -147,9 +147,9 @@
     <Resource Include="Assets\profilbillede.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
-      <Project>{ae8cd645-6668-4926-a6be-c44faab007eb}</Project>
-      <Name>DataLayer</Name>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{1fe5512f-f7e4-41eb-90c2-7af012f15bb9}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
       <Project>{fda67d74-952c-4890-aecc-b32bfce39409}</Project>

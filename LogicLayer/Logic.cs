@@ -41,7 +41,7 @@ namespace LogicLayer
 
             foreach (DTO_Weight x in weightList)
             {
-                x.BMI = Convert.ToInt32(x.Weight) / Convert.ToInt32((height / 100) * (height / 100));
+                x.BMI = Convert.ToInt32(x.Weight / ((height / 100) * (height / 100)));
             }
 
             return weightList;

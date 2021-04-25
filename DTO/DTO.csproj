@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDA67D74-952C-4890-AECC-B32BFCE39409}</ProjectGuid>
+    <ProjectGuid>{1FE5512F-F7E4-41EB-90C2-7AF012F15BB9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LogicLayer</RootNamespace>
-    <AssemblyName>LogicLayer</AssemblyName>
+    <RootNamespace>DTO</RootNamespace>
+    <AssemblyName>DTO</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,21 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic.cs" />
+    <Compile Include="DTO_BPressure.cs" />
+    <Compile Include="DTO_BSugar.cs" />
+    <Compile Include="DTO_Weight.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
-      <Project>{ae8cd645-6668-4926-a6be-c44faab007eb}</Project>
-      <Name>DataLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{1fe5512f-f7e4-41eb-90c2-7af012f15bb9}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

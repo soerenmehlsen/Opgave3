@@ -44,14 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataFile.cs" />
-    <Compile Include="DTO_BPressure.cs" />
-    <Compile Include="DTO_BSugar.cs" />
-    <Compile Include="DTO_Weight.cs" />
     <Compile Include="IData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{1fe5512f-f7e4-41eb-90c2-7af012f15bb9}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
