@@ -15,7 +15,7 @@ namespace DataLayer
         // Herunder KAN du skrive en sti til den mappe hvori er gemt.
         // MEN i fht. OPGAVE 3 SKAL filerne placeres korrekt i PROJEKTET - ellers virker det ikke når du afleverer opgaven.
         //private const String filepath = @"\\C:\Users\Søren Mehlsen\source\repos\Opgave2\Opgave2\bin\Debug";
-        //Jeg har valgt at lade programmet gemme filerne i debug mappen, som er standard mappen.
+        //Jeg har valgt at lade programmet gemme filerne i debug mappen, som er standard mappen..
         public DataFile() { }
 
         public override bool isUserRegistered(String socSecNb, String pw)
