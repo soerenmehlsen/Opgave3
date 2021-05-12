@@ -10,11 +10,10 @@ namespace LogicLayer
 {
     public class Logic
     {
-        private DataFile dataObject;
-        static void Main(string[] args)
-        {
+        private IData dataObject;
 
-        }
+        static void Main(string[] args) { }
+
         public Logic()
         {
             dataObject = new DataFile();

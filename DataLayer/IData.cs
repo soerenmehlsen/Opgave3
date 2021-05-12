@@ -7,20 +7,16 @@ using DTO;
 
 namespace DataLayer
 {
-    abstract public class IData
+    public interface IData
     {
-        static void Main(string[] args)
-        {
-        }
+        bool isUserRegistered(String socSecNb, String pw);
 
-        abstract public bool isUserRegistered(String socSecNb, String pw);
+        int getHeight(String socSecNb);
 
-        abstract public int getHeight(String socSecNb);
+        List<DTO_Weight> getWeightData(String socSecNb);
 
-        abstract public List<DTO_Weight> getWeightData(String socSecNb);
+        List<DTO_BSugar> getBSugarData(String socSecNb);
 
-        abstract public List<DTO_BSugar> getBSugarData(String socSecNb);
-
-        abstract public List<DTO_BPressure> getBPressureData(String socSecNb);
+        List<DTO_BPressure> getBPressureData(String socSecNb);
     }
 }

@@ -101,8 +101,10 @@ namespace PresentationLayer
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
+            
             loginW.Show();
             MainW.Hide();
+            
         }
 
         private void exitBT_Click(object sender, RoutedEventArgs e)

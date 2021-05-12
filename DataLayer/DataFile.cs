@@ -16,9 +16,11 @@ namespace DataLayer
         // MEN i fht. OPGAVE 3 SKAL filerne placeres korrekt i PROJEKTET - ellers virker det ikke når du afleverer opgaven.
         //private const String filepath = @"\\C:\Users\Søren Mehlsen\source\repos\Opgave2\Opgave2\bin\Debug";
         //Jeg har valgt at lade programmet gemme filerne i debug mappen, som er standard mappen..
+
+        static void Main(string[] args){ }
         public DataFile() { }
 
-        public override bool isUserRegistered(String socSecNb, String pw)
+        public bool isUserRegistered(String socSecNb, String pw)
         {
             bool result = false;
 
@@ -44,7 +46,7 @@ namespace DataLayer
             return result;
         }
 
-        public override int getHeight(String socSecNb)
+        public int getHeight(String socSecNb)
         {
             int result = 0;
             // string-objekter til at gemme det som læses fra filen
@@ -75,7 +77,7 @@ namespace DataLayer
             return result;
         }
 
-        public override List<DTO_Weight> getWeightData(String socSecNb)
+        public List<DTO_Weight> getWeightData(String socSecNb)
         {
             List<DTO_Weight> weightList = new List<DTO_Weight>();
 
@@ -107,7 +109,7 @@ namespace DataLayer
             return weightList;
         }
 
-        public override List<DTO_BSugar> getBSugarData(String socSecNb)
+        public List<DTO_BSugar> getBSugarData(String socSecNb)
         {
             List<DTO_BSugar> bsList = new List<DTO_BSugar>();
 
@@ -139,7 +141,7 @@ namespace DataLayer
             return bsList;
         }
 
-        public override List<DTO_BPressure> getBPressureData(String socSecNb)
+        public List<DTO_BPressure> getBPressureData(String socSecNb)
         {
             List<DTO_BPressure> bpList = new List<DTO_BPressure>();
 
