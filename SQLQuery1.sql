@@ -56,4 +56,6 @@
 --insert into BloodPressure (SocSecNb, Systolic, Diastolic, Date) values ('345678-9012',115,100,'2015-01-05')
 --insert into BloodPressure (SocSecNb, Systolic, Diastolic, Date) values ('123456-7890',120,95,'2015-01-05')
 
-select * from RegisteredUsers where SocSecNb ='123456-7890' AND PW = 1234  
+--select * from RegisteredUsers where SocSecNb ='123456-7890' AND PW = 1234  
+
+select * from RegisteredUsers where SocSecNb = '123456-7890'

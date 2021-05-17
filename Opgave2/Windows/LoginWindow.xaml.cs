@@ -43,9 +43,8 @@ namespace PresentationLayer
             else
             {
                 MessageBox.Show("Forkert brugernavn eller password");
-                UserNameTB.Clear();
                 passswordBox.Clear();
-                UserNameTB.Focus();
+                passswordBox.Focus();
                 mainWRef.LoginOK = false;
             }
         }
@@ -64,6 +63,11 @@ namespace PresentationLayer
         private void passswordBox_GotFocus(object sender, RoutedEventArgs e)
         {
             passswordBox.SelectAll();
+        }
+
+        private void ForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Har du glemt din adgangskode?" + "\n" + "\nHvis du har glemt din adgangskode, skal du bestille en ny midlertidig adgangskode." + "\n" +  "\nKontakt NemID-support for ny midlertidig adgangskode.", "Glemt adgangskode");
         }
     }
 }

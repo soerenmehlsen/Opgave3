@@ -44,10 +44,10 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
                 <Run
-                    Text="Login"/>
+                    Text="NEM"/>
                 <Run
                     FontWeight="Bold"
-                    Text="System"/>
+                    Text="ID"/>
             </TextBlock>
 
             <Button 
@@ -146,7 +146,7 @@
                     BorderThickness="0"
                     Foreground="#a3a3a4"
                     Grid.Column="1"
-                    Text="Brugernavn" FontSize="20"
+                    Text="Bruger-id" FontSize="20"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Padding="2,0"/>
@@ -210,8 +210,8 @@
                 Grid.Row="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom" Margin="0,2">
-                <Hyperlink
-                    TextDecorations="None">
+                <Hyperlink x:Name="ForgotPassword"
+                    TextDecorations="None" Click="ForgotPassword_Click">
                     Har du glemt din konto?
                 </Hyperlink>
                 </TextBlock>

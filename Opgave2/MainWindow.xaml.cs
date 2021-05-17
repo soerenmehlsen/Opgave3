@@ -28,7 +28,7 @@ namespace PresentationLayer
         private WeightWindow weightW;
         public String SocSecNb { get; set; }
         public bool LoginOK { get; set; }
-        public String Username { get; set; } //property (visning af brugernavn på hovedmenu)
+        public String Username { get; set; } //(visning af brugernavn på hovedmenu)
         public MainWindow()
         {
             InitializeComponent();

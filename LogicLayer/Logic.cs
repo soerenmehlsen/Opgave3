@@ -16,7 +16,8 @@ namespace LogicLayer
 
         public Logic()
         {
-            dataObject = new DataFile();
+            //dataObject = new DataFile();
+            dataObject = new DataBase();
         }
 
         public bool CheckLogin(String socSecNb, String pw)
