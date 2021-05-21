@@ -170,7 +170,8 @@
                         Width="25"
                         Height="25"
                         Data="{StaticResource pass_icon}"
-                        Fill="Silver"/>
+                        Fill="Silver"
+                        />
 
                         <PasswordBox 
                     x:Name="passswordBox"
@@ -215,6 +216,7 @@
                     Har du glemt din konto?
                 </Hyperlink>
                 </TextBlock>
+
             </Grid>
         </Grid>
     </Border>

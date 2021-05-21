@@ -69,5 +69,6 @@ namespace PresentationLayer
         {
             MessageBox.Show("Har du glemt din adgangskode?" + "\n" + "\nHvis du har glemt din adgangskode, skal du bestille en ny midlertidig adgangskode." + "\n" +  "\nKontakt NemID-support for ny midlertidig adgangskode.", "Glemt adgangskode");
         }
+
     }
 }
